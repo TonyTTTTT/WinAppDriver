@@ -87,7 +87,7 @@ class SimpleCalculatorTests(unittest.TestCase):
         self.driver.find_element(By.ACCESSIBILITY_ID,  "num1Button").click()
         self.driver.find_element(By.ACCESSIBILITY_ID, "equalButton").click()
         self.assertEqual(self.getresults(),"8")
-        
+
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(SimpleCalculatorTests)
