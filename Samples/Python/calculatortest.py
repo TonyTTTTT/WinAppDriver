@@ -43,7 +43,7 @@ class SimpleCalculatorTests(unittest.TestCase):
     def test_initialize(self):
         self.driver.find_element(By.ACCESSIBILITY_ID, "clearButton").click()
         self.driver.find_element(By.ACCESSIBILITY_ID, "num7Button").click()
-        self.assertEqual(self.getresults(),"7")
+        self.assertEqual(self.getresults(), "7")
         self.driver.find_element(By.ACCESSIBILITY_ID, "clearButton").click()
 
     def test_addition(self):
@@ -51,7 +51,7 @@ class SimpleCalculatorTests(unittest.TestCase):
         self.driver.find_element(By.ACCESSIBILITY_ID, "plusButton").click()
         self.driver.find_element(By.ACCESSIBILITY_ID, "num7Button").click()
         self.driver.find_element(By.ACCESSIBILITY_ID, "equalButton").click()
-        self.assertEqual(self.getresults(),"8")
+        self.assertEqual(self.getresults(), "8")
 
     def test_combination(self):
         self.driver.find_element(By.ACCESSIBILITY_ID, "num7Button").click()
@@ -63,7 +63,7 @@ class SimpleCalculatorTests(unittest.TestCase):
         self.driver.find_element(By.ACCESSIBILITY_ID, "divideButton").click()
         self.driver.find_element(By.ACCESSIBILITY_ID, "num8Button").click()
         self.driver.find_element(By.ACCESSIBILITY_ID, "equalButton").click()
-        self.assertEqual(self.getresults(),"8")
+        self.assertEqual(self.getresults(), "8")
 
     def test_division(self):
         self.driver.find_element(By.ACCESSIBILITY_ID, "num8Button").click()
@@ -72,14 +72,14 @@ class SimpleCalculatorTests(unittest.TestCase):
         self.driver.find_element(By.ACCESSIBILITY_ID, "num1Button").click()
         self.driver.find_element(By.ACCESSIBILITY_ID, "num1Button").click()
         self.driver.find_element(By.ACCESSIBILITY_ID, "equalButton").click()
-        self.assertEqual(self.getresults(),"8")
+        self.assertEqual(self.getresults(), "8")
 
     def test_multiplication(self):
         self.driver.find_element(By.ACCESSIBILITY_ID, "num9Button").click()
         self.driver.find_element(By.ACCESSIBILITY_ID, "multiplyButton").click()
         self.driver.find_element(By.ACCESSIBILITY_ID, "num9Button").click()
         self.driver.find_element(By.ACCESSIBILITY_ID, "equalButton").click()
-        self.assertEqual(self.getresults(),"81") 
+        self.assertEqual(self.getresults(), "81")
 
     def test_subtraction(self):
         self.driver.find_element(by=By.ACCESSIBILITY_ID, value="num9Button").click()
@@ -87,6 +87,7 @@ class SimpleCalculatorTests(unittest.TestCase):
         self.driver.find_element(By.ACCESSIBILITY_ID,  "num1Button").click()
         self.driver.find_element(By.ACCESSIBILITY_ID, "equalButton").click()
         self.assertEqual(self.getresults(),"8")
+        
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(SimpleCalculatorTests)
